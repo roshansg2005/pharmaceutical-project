@@ -1,0 +1,26 @@
+:root { --med-green: #2d6a4f; --med-olive: #8b9467; --med-saffron: #f9b949; }
+.stock-page { padding: 30px; background: #fdfcf8; min-height: 100vh; font-family: sans-serif; }
+.top-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--med-saffron); margin-bottom: 20px; }
+.id-badge { background: var(--med-green); color: white; padding: 5px 15px; border-radius: 4px; font-weight: bold; }
+.form-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 20px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.mt-15 { margin-top: 15px; }
+.f-group label { display: block; font-size: 0.75rem; font-weight: bold; color: var(--med-olive); margin-bottom: 5px; }
+.f-group input, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+.readonly { background: #f0f0f0; border: 1px dashed var(--med-olive); cursor: not-allowed; }
+.stock-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+.stock-table th { background: #f4f6f0; color: var(--med-olive); padding: 10px; text-align: left; }
+.stock-table td { padding: 5px; border-bottom: 1px solid #eee; }
+.stock-table input { width: 100%; padding: 6px; border: 1px solid #eee; border-radius: 4px; }
+.amt-txt { font-weight: bold; color: var(--med-green); text-align: right; }
+.row-id { font-weight: bold; color: var(--med-olive); text-align: center; background: #fafafa; }
+.search-container { position: relative; }
+.dropdown { position: absolute; top: 100%; left: 0; width: 100%; background: white; border: 1px solid var(--med-olive); z-index: 1000; list-style: none; padding: 0; margin: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.rich-drop { width: 400px; }
+.dropdown li { padding: 10px; cursor: pointer; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+.dropdown li:hover { background: #f1f5e9; }
+.save-container { text-align: right; }
+.save-btn { background: var(--med-saffron); color: white; border: none; padding: 12px 30px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+.add-btn { background: var(--med-olive); color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+.del-btn { color: #e63946; border: none; background: transparent; cursor: pointer; }

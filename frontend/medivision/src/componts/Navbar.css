@@ -1,0 +1,290 @@
+:root {
+  --ayur-olive: #8b9467;
+  --ayur-clay: #a6735b;
+  --ayur-saffron: #f9b949;
+  --ayur-bg: #fdfcf8;
+}
+
+/* Base Navbar */
+.ayur-navbar {
+  background: linear-gradient(90deg, #7d8471, var(--ayur-olive)) !important;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 4px solid var(--ayur-saffron);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: visible !important; /* ALLOWS DROPDOWN TO SHOW */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Brand Section */
+.navbar-brand { display: flex; align-items: center; gap: 10px; cursor: pointer; flex-shrink: 0; }
+.brand-main { font-family: 'serif'; font-size: 1.6rem; font-weight: 900; color: white; line-height: 1; }
+.brand-sub { font-size: 0.55rem; color: var(--ayur-saffron); font-weight: bold; }
+
+/* Search Box (Glassmorphism) */
+.navbar-search { flex: 1; max-width: 250px; margin: 0 20px; }
+.search-box {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 6px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.search-box input { background: none; border: none; color: white; outline: none; width: 100%; }
+
+/* Menu Section - Forces items to stay in line */
+.navbar-menu { display: flex; list-style: none; gap: 15px; margin: 0; padding: 0; }
+.menu-item { position: relative; display: flex; align-items: center; height: 80px; }
+.menu-trigger {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.menu-trigger:hover { background: rgba(255, 255, 255, 0.1); }
+
+/* THE DROPDOWN - This is what was missing/hidden */
+.dropdown-menu {
+  position: absolute;
+  top: 80px; /* Aligned to navbar height */
+  left: 0;
+  background-color: var(--ayur-bg);
+  min-width: 210px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-top: 3px solid var(--ayur-saffron);
+  border-radius: 0 0 8px 8px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 999999 !important; /* FORCES IT TO THE FRONT */
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu li {
+  padding: 12px 20px;
+  color: #2d3322;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background-color: #dce2d1;
+  color: var(--ayur-olive);
+  padding-left: 28px;
+}
+
+/* Action Icons */
+.navbar-actions { display: flex; align-items: center; gap: 15px; color: white; }
+.action-item { position: relative; cursor: pointer; font-size: 1.2rem; }
+.badge { position: absolute; top: -8px; right: -8px; background: var(--ayur-clay); font-size: 0.6rem; padding: 2px 5px; border-radius: 50%; border: 1px solid white; }
+
+:root {
+  --ayur-olive: #8b9467;     /* Green from PIRENS logo */
+  --ayur-clay: #a6735b;      /* Terracotta from logo */
+  --ayur-saffron: #f9b949;    /* Gold accent */
+  --ayur-bg: #fdfcf8;         /* Creamy background */
+}
+
+/* Base Navbar Fix */
+.ayur-navbar {
+  background: linear-gradient(90deg, #7d8471, var(--ayur-olive)) !important;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid var(--ayur-saffron) !important;
+  position: sticky;
+  top: 0;
+  /* CRITICAL: Must be visible to allow dropdowns to pop out */
+  z-index: 1000 !important;
+  overflow: visible !important; 
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: visible !important;
+}
+
+/* Menu Item Container */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative !important; /* REQUIRED for dropdown positioning */
+  display: flex;
+  align-items: center;
+  height: 80px; /* Match navbar height for better hover area */
+}
+
+.menu-trigger {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+/* THE DROPDOWN FIX */
+.dropdown-menu {
+  position: absolute;
+  top: 80px; /* Sits exactly at the bottom of the green bar */
+  left: 0;
+  background-color: var(--ayur-bg) !important;
+  min-width: 220px;
+  border-top: 3px solid var(--ayur-saffron) !important;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  
+  /* HIGHEST PRIORITY: Forces it to float over dashboard cards */
+  z-index: 999999 !important; 
+  display: block !important; 
+  pointer-events: auto !important; /* Ensures items are clickable */
+}
+
+.dropdown-menu li {
+  color: #2d3322 !important;
+  padding: 12px 20px !important;
+  font-size: 0.85rem;
+  cursor: pointer !important;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+  background-color: #dce2d1 !important; /* Sage green hover */
+  color: var(--ayur-olive) !important;
+  padding-left: 28px !important;
+}
+
+/* Chevron Rotation */
+.chevron {
+  transition: transform 0.3s ease;
+}
+.chevron.rotated {
+  transform: rotate(180deg);
+}
+/* --- LOGOUT MODAL STYLES --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dim background */
+  backdrop-filter: blur(4px);    /* Blur background effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's on top of everything */
+}
+
+.confirm-modal {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: modalScale 0.3s ease-out;
+}
+
+@keyframes modalScale {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.confirm-modal h3 {
+  color: var(--pirens-green);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.confirm-modal p {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-cancel {
+  background: #f1f2f6;
+  border: none;
+  color: #333;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-confirm {
+  background: var(--pirens-brown);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-confirm:hover {
+  background: #8e543d;
+  transform: translateY(-2px);
+}
+
+.btn-cancel:hover {
+  background: #e1e2e6;
+}

@@ -1,0 +1,250 @@
+:root {
+  --ayur-green: #2d6a4f;
+  --ayur-olive: #8b9467;
+  --ayur-saffron: #f9b949;
+  --bg-soft: #fdfcf8;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.sales-fullpage {
+  padding: 30px;
+  background-color: var(--bg-soft);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- Navigation & Search --- */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 3px solid var(--ayur-saffron);
+  padding-bottom: 10px;
+}
+
+.top-nav h2 {
+  color: var(--ayur-green);
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  background: var(--ayur-olive);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* --- Header Grid --- */
+.header-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.f-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ayur-olive);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.f-group input, .f-group select {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.mt-10 { margin-top: 15px; }
+
+.readonly-input {
+  background-color: #f0f0f0 !important;
+  color: #666;
+  border: 1px dashed #ccc !important;
+  cursor: not-allowed;
+}
+
+/* --- Search Dropdowns --- */
+.rel { position: relative; }
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 2px solid var(--ayur-olive);
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.dropdown li:hover {
+  background: #f1f5e9;
+}
+
+/* --- Table Styles --- */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #f4f6f0;
+  color: var(--ayur-olive);
+  padding: 12px;
+  text-align: left;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+td input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+}
+
+.bold { font-weight: bold; color: var(--ayur-green); }
+
+/* --- Footer & Totals --- */
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 40px;
+}
+
+textarea {
+  flex: 1;
+  height: 100px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  resize: none;
+}
+
+.totals-box {
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.t-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.grand {
+  border-top: 2px solid var(--ayur-saffron);
+  padding-top: 10px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--ayur-green);
+}
+
+/* --- Buttons --- */
+.add-btn {
+  background: var(--ayur-olive);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.save-btn {
+  background: var(--ayur-green);
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.row-del {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+}

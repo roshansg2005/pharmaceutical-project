@@ -1,0 +1,142 @@
+:root {
+  --ayur-green: #2d5a27;      /* Deep Leaf Green */
+  --ayur-accent: #81b622;     /* Fresh Herb Green */
+  --ayur-earth: #5d4037;      /* Bark Brown */
+  --ayur-bg: #fdfcf8;         /* Paper/Cream Background */
+  --ayur-border: #d2ceb4;     /* Sandstone Border */
+}
+
+.ayur-medical-bg {
+  background-color: #f4f3ef;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Full Width Utility */
+.full-window {
+   width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background: white;
+  min-height: 95vh;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+}
+
+/* Header Styling */
+.medical-header {
+  background: var(--ayur-green);
+  color: white;
+  padding: 25px 40px;
+  border-bottom: 5px solid var(--ayur-accent);
+}
+
+.brand-title {
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+}
+
+.medical-badge {
+  background: var(--ayur-accent);
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* Section Containers */
+.form-section-box {
+  border: 1px solid var(--ayur-border);
+  padding: 25px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.section-heading {
+  color: var(--ayur-green);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--ayur-accent);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.ayur-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ayur-earth);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.ayur-input {
+  border: 1px solid var(--ayur-border);
+  padding: 10px;
+  font-size: 0.95rem;
+  background-color: var(--ayur-bg);
+}
+
+.ayur-input:focus {
+  border-color: var(--ayur-accent);
+  box-shadow: 0 0 0 0.25rem rgba(129, 182, 34, 0.15);
+  background-color: #fff;
+}
+
+/* Highlighted Principal Fields */
+.highlight-field {
+  border-left: 4px solid var(--ayur-accent);
+  font-weight: 600;
+}
+
+/* Footer Actions */
+.form-footer {
+  padding-top: 20px;
+  border-top: 2px solid var(--ayur-border);
+}
+
+.btn-ayur-primary {
+  background: var(--ayur-green);
+  color: white;
+  padding: 12px 40px;
+  font-weight: 700;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-ayur-primary:hover {
+  background: var(--ayur-earth);
+  transform: translateY(-2px);
+}
+
+.btn-ayur-secondary {
+  background: #e2e2e2;
+  color: #444;
+  padding: 12px 30px;
+  border: none;
+  font-weight: 600;
+}
+
+/* Error Styling */
+.is-invalid {
+  border-color: #dc3545 !important;
+  background-color: #fff8f8 !important;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* Optional: Add a subtle pulse to invalid fields */
+.is-invalid:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.15);
+}

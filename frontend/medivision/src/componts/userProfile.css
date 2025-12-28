@@ -1,0 +1,213 @@
+/* --- BRAND COLORS (Extracted from PIRENS Logo) --- */
+:root {
+  --pirens-green: #899a5b;     /* Olive Green */
+  --pirens-yellow: #eebb4d;    /* Mustard Yellow */
+  --pirens-brown: #a8644b;     /* Terracotta Red/Brown */
+  --pirens-text: #7f8b54;      /* Text Color */
+  --bg-color: #f4f6f0;         /* Soft greenish-grey background */
+  --card-bg: #ffffff;
+  --text-dark: #333333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+}
+
+.pirens-dashboard {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- 1. HEADER --- */
+.brand-header {
+  background: white;
+  padding: 15px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid var(--pirens-yellow);
+}
+
+.logo-section { display: flex; align-items: center; gap: 20px; }
+.logo-symbol { position: relative; width: 60px; height: 40px; }
+.circle { width: 30px; height: 30px; border-radius: 50%; position: absolute; mix-blend-mode: multiply; }
+.circle.olive { background-color: var(--pirens-green); left: 0; top: 0; z-index: 2; }
+.circle.gold { background-color: var(--pirens-yellow); left: 18px; top: 12px; z-index: 3; }
+.circle.terra { background-color: var(--pirens-brown); left: 32px; top: 0; z-index: 1; }
+
+.logo-main { font-size: 2.5rem; color: var(--pirens-green); font-weight: 400; letter-spacing: 2px; margin: 0; }
+.vertical-divider { width: 2px; height: 35px; background-color: var(--pirens-yellow); margin: 0 20px; }
+.logo-sub { display: flex; flex-direction: column; }
+.sub-top { font-size: 1rem; color: #666; }
+.sub-bottom { font-size: 1rem; color: var(--pirens-green); font-weight: bold; }
+
+/* --- 2. LAYOUT GRID --- */
+.content-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* Profile Column is wider to fit large img */
+  gap: 30px;
+}
+
+/* --- 3. PROFILE CARD (LARGE IMAGE) --- */
+.profile-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 20px;
+}
+
+/* Specific Wrapper for the Large Image */
+.profile-img-large-wrapper {
+  position: relative;
+  width: 180px;  /* LARGE SIZE defined here */
+  height: 180px; /* LARGE SIZE defined here */
+  margin: 0 auto 25px;
+}
+
+/* The Image itself fills the wrapper */
+.profile-img-large {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--bg-color); /* Thicker border for prominence */
+  box-shadow: 0 0 0 3px var(--pirens-green); /* External glow ring */
+}
+
+.online-indicator-large {
+  width: 24px;
+  height: 24px;
+  background-color: #2ecc71;
+  border: 4px solid white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.user-name { color: var(--pirens-brown); font-size: 2rem; margin: 10px 0; }
+.user-role-badge { background-color: var(--pirens-green); color: white; padding: 6px 18px; border-radius: 20px; font-weight: 600; }
+.info-list { margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; text-align: left; }
+.info-item { margin-bottom: 15px; }
+.info-item label { display: block; font-size: 0.8rem; color: #999; text-transform: uppercase; margin-bottom: 4px; }
+.info-item span { font-weight: 600; color: var(--text-dark); font-size: 1.1rem; }
+
+/* --- 4. STAFF DIRECTORY (NORMAL IMAGES) --- */
+.team-section {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.section-header h3 {
+  color: var(--pirens-green);
+  border-bottom: 2px solid var(--pirens-yellow);
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.staff-card {
+  background-color: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.staff-card:hover {
+  background-color: white;
+  border-color: var(--pirens-yellow);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transform: translateY(-5px);
+}
+
+.staff-header-row { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+
+/* Normal Size Images Wrapper (70px) */
+.staff-img-wrapper {
+  position: relative;
+  width: 70px;  /* NORMAL SIZE */
+  height: 70px; /* NORMAL SIZE */
+  flex-shrink: 0;
+}
+
+.staff-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0e0e0;
+}
+
+.status-dot {
+  width: 14px; height: 14px; border-radius: 50%; position: absolute; bottom: 0; right: 0; border: 2px solid white;
+}
+.status-dot.online { background-color: #2ecc71; }
+.status-dot.offline { background-color: #e74c3c; }
+
+.staff-info h4 { margin: 0; font-size: 1.1rem; color: var(--text-dark); }
+.staff-info p { margin: 3px 0 0; font-size: 0.9rem; color: #888; }
+
+.action-btn {
+  width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--pirens-green);
+  background: white; color: var(--pirens-green); font-weight: 600; cursor: pointer;
+  transition: 0.2s; display: flex; justify-content: center; align-items: center; gap: 8px;
+}
+.action-btn:hover { background: var(--pirens-green); color: white; }
+.badge-count { background: #e74c3c; color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 10px; }
+
+/* --- 5. CHAT INTERFACE --- */
+.chat-interface {
+  position: fixed; bottom: 20px; right: 20px; width: 380px; background: white;
+  border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); overflow: hidden;
+  z-index: 1000; display: flex; flex-direction: column; height: 500px;
+}
+
+.chat-top-bar { background: var(--pirens-green); padding: 15px; display: flex; justify-content: space-between; align-items: center; color: white; }
+.chat-user-info { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.chat-avatar-small img { width: 35px; height: 35px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.5); }
+.close-chat { background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; opacity: 0.8; }
+
+.chat-messages-area {
+  flex: 1; background-color: #eef1e9; padding: 20px; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 10px;
+}
+
+.message-row { display: flex; width: 100%; }
+.message-row.sent { justify-content: flex-end; }
+.message-row.received { justify-content: flex-start; }
+
+.message-bubble {
+  max-width: 75%; padding: 10px 15px; border-radius: 16px; font-size: 0.95rem; line-height: 1.4;
+  position: relative; box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.sent .message-bubble { background-color: var(--pirens-green); color: white; border-bottom-right-radius: 4px; }
+.received .message-bubble { background-color: white; color: var(--text-dark); border-bottom-left-radius: 4px; }
+
+.timestamp { display: block; font-size: 0.7rem; margin-top: 4px; text-align: right; opacity: 0.7; }
+
+.chat-input-area {
+  padding: 15px; background: white; border-top: 1px solid #ddd; display: flex; align-items: center; gap: 10px;
+}
+.chat-input-area input {
+  flex: 1; padding: 12px 15px; border-radius: 25px; border: 1px solid #ddd; outline: none; background: #f8f8f8;
+}
+.send-btn { background: var(--pirens-yellow); border: none; width: 45px; height: 45px; border-radius: 50%; color: white; font-size: 1.2rem; cursor: pointer; }

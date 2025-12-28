@@ -1,0 +1,144 @@
+/* Ayurvedic Medical Theme Colors */
+:root {
+  --ayur-dark: #1b4332;   /* Deep Forest Green */
+  --ayur-mid: #2d6a4f;    /* Tulsi Green */
+  --ayur-saffron: #ff9f1c; /* Saffron/Herbal Accent */
+  --ayur-cream: #fdfcf8;  /* Off-white Background */
+  --error: #d90429;       /* Error Red */
+}
+
+.ayur-company-bg {
+  background-color: #f0f2f0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Full Window Expansion */
+.full-window {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background: white;
+  min-height: 95vh;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.company-header {
+  background: var(--ayur-dark);
+  color: white;
+  padding: 20px 40px;
+  border-bottom: 5px solid var(--ayur-saffron);
+}
+
+.brand-title {
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+}
+
+.auto-code-badge {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Form Section Boxes */
+.form-section-box {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--ayur-cream);
+}
+
+.section-heading {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--ayur-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--ayur-saffron);
+  padding-left: 10px;
+}
+
+/* Inputs & Labels */
+.ayur-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.ayur-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.read-only-input {
+  background-color: #eee !important;
+  font-weight: 700;
+  color: var(--ayur-mid);
+}
+
+.highlight-field {
+  border-left: 3px solid var(--ayur-mid);
+}
+
+/* Dynamic Add/Remove Buttons */
+.btn-add-div {
+  background: transparent;
+  border: 2px dashed var(--ayur-mid);
+  color: var(--ayur-mid);
+  font-weight: 700;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-remove-div {
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  color: #c53030;
+  width: 40px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Error States */
+.is-invalid { border-color: var(--error) !important; }
+.error-msg { color: var(--error); font-size: 0.7rem; font-weight: 800; margin-top: 4px; }
+
+/* Action Buttons */
+.btn-ayur-primary {
+  background: var(--ayur-mid);
+  color: white;
+  border: none;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.btn-ayur-primary:hover {
+  background: var(--ayur-dark);
+}
+
+.btn-ayur-secondary {
+  background: #e0e0e0;
+  font-weight: 600;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+}
+
+.ayur-checkbox {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--ayur-dark);
+  cursor: pointer;
+}

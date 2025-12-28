@@ -1,0 +1,195 @@
+/* ===== PIRENS Ayurvedic Theme Palette ===== */
+:root {
+  --ayur-olive: #8b9467;     /* Primary Green from PIRENS logo */
+  --ayur-clay: #a6735b;      /* Terracotta shade from logo */
+  --ayur-saffron: #f9b949;    /* Saffron Gold accent */
+  --ayur-bg: #fdfcf8;         /* Earthy off-white background */
+  --ayur-text-dark: #2d3322;  /* Dark Moss for primary text */
+  --ayur-sage-light: #dce2d1; /* Soft Sage for backgrounds/table headers */
+  --ayur-border: #e2e8da;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--ayur-bg);
+  color: var(--ayur-text-dark);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+h2, h3 {
+  color: var(--ayur-olive);
+  font-weight: 700;
+}
+
+/* ===== Main Layout ===== */
+.homepage-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+/* Dashboard Header */
+.dashboard-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.dashboard-header p {
+  color: var(--ayur-clay);
+  font-weight: 600;
+}
+
+/* ===== Buttons & Selectors ===== */
+.period-selector {
+  display: flex;
+  gap: 12px;
+}
+
+.period-selector button, 
+.view-btn, 
+.quick-actions button {
+  background-color: var(--ayur-clay); /* Terracotta */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.period-selector button:hover, 
+.view-btn:hover, 
+.quick-actions button:hover {
+  background-color: var(--ayur-olive); /* Changes to Olive on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.period-selector button.active {
+  background-color: var(--ayur-olive);
+  box-shadow: 0 0 0 3px var(--ayur-sage-light);
+}
+
+/* ===== Date Picker Styling ===== */
+.date-range-picker {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--ayur-border);
+  width: fit-content;
+}
+
+.date-range-picker label {
+  font-weight: 700;
+  color: var(--ayur-olive);
+}
+
+.react-datepicker-wrapper input {
+  padding: 8px 12px;
+  border: 2px solid var(--ayur-sage-light);
+  border-radius: 6px;
+  outline: none;
+  color: var(--ayur-text-dark);
+}
+
+.react-datepicker-wrapper input:focus {
+  border-color: var(--ayur-saffron);
+}
+
+/* ===== Dashboard Cards ===== */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(139, 148, 103, 0.1);
+  border-top: 5px solid var(--ayur-saffron); /* Saffron accent top border */
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--ayur-olive);
+  margin: 15px 0;
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-top: 1rem;
+}
+
+table th {
+  background-color: var(--ayur-sage-light);
+  color: var(--ayur-text-dark);
+  padding: 12px;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+table td {
+  padding: 12px;
+  background: #fff;
+  border-top: 1px solid var(--ayur-border);
+  border-bottom: 1px solid var(--ayur-border);
+}
+
+table tr td:first-child { border-left: 1px solid var(--ayur-border); border-radius: 8px 0 0 8px; }
+table tr td:last-child { border-right: 1px solid var(--ayur-border); border-radius: 0 8px 8px 0; }
+
+/* ===== Extra Sections Grid ===== */
+.extra-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.extra-sections ul {
+  list-style: none;
+  padding: 0;
+}
+
+.extra-sections li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--ayur-border);
+  font-size: 0.95rem;
+}
+
+.extra-sections li:last-child {
+  border-bottom: none;
+}
+
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .period-selector { flex-wrap: wrap; }
+  .date-range-picker { flex-direction: column; align-items: flex-start; }
+}
