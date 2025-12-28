@@ -69,8 +69,8 @@ PharmaTrack is a full-stack B2B pharmaceutical management system designed to aut
 
 ### Backend Setup
 ```bash
-git clone https://github.com/your-username/pharmatrack.git
-cd pharmatrack/backend
+https://github.com/roshansg2005/pharmaceutical-project.git
+cd pharmaceutical-project/backend
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
