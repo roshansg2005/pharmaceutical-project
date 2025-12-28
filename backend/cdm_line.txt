@@ -1,0 +1,8 @@
+create a env
+
+run env
+source env/bin/activate
+
+run code in backend
+(env) /project/code/backend$ uvicorn auth-backend.app.main:app --reload
+
